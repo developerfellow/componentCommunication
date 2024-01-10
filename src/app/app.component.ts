@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'componentCommunication';
+  servers = [
+    {name:'Production Server',status:'online'},
+    {name:'Development Server',status:'offline'},
+    {name:'Test Server',status:'unknown'}
+  ];
+  onInsertHandler(event:any){
+  this.servers.push(event);
+  }
 }
